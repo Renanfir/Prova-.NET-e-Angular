@@ -1,0 +1,77 @@
+<main class="main">
+<form class="formulario" style="max-width:500px; margin:2rem auto;" (ngSubmit)="onSubmit()">
+  <h1>Cadastro endereco usuário Vertrau</h1>
+
+  <div class="idusuario">
+    <label for="idusuario">Id do usuário</label>
+    <input id="idusuario" type="number" pInputText placeholder="ID do Usuario" [(ngModel)]="idusuario" name="idusuario" required />
+  </div>
+
+  <div class="cep">
+    <label for="cep">Cep</label>
+    <input id="cep" type="text" pInputText placeholder="CEP no formato: NNNNN-NNN" [(ngModel)]="cep" name="cep" minlength="9" maxlength="9" (blur)="buscarCep()" required />
+  </div>
+
+  <div class="estado" >
+    <label for="estado">Estado</label>
+    <select name="estado" id="estado" [(ngModel)] = "estado">
+    <option value="AC">AC</option>
+    <option value="AL">AL</option>
+    <option value="AP">AP</option>
+    <option value="AM">AM</option>
+    <option value="BA">BA</option>
+    <option value="CE">CE</option>
+    <option value="DF">DF</option>
+    <option value="ES">ES</option>
+    <option value="GO">GO</option>
+    <option value="MA">MA</option>
+    <option value="MG">MT</option>
+    <option value="MS">MS</option>
+    <option value="MT">MT</option>
+    <option value="PB">PB</option>
+    <option value="PR">PR</option>
+    <option value="PE">PE</option>
+    <option value="PI">PI</option>
+    <option value="RJ">RJ</option>
+    <option value="RN">RN</option>
+    <option value="RS">RS</option>
+    <option value="RO">RO</option>
+    <option value="RR">RR</option>
+    <option value="SC">SC</option>
+    <option value="SP">SP</option>
+    <option value="SE">SE</option>
+    <option value="TO">SE</option>
+    </select>
+  </div>
+
+  <div class="rua">
+    <label for="rua">Rua</label>
+    <input id="rua" type="text" pInputText placeholder="Rua" [(ngModel)]="rua" name="rua" required />
+  </div>
+  
+  <div class="bairro">
+    <label for="bairro">Bairro</label>
+    <input id="bairro" type="text" pInputText placeholder="Bairro" [(ngModel)]="bairro" name="bairro" required />
+  </div>
+
+
+  <div class="numero">
+    <label for="numero">Numero</label>
+    <input id="numero" type="number" pInputText placeholder="Numero" [(ngModel)]="numero" name="numero" min="1" required />
+  </div>
+
+
+  <div class="complemento">
+    <label for="complemento">Complemento</label>
+    <input id="complemento" type="text" pInputText placeholder="Complemento" [(ngModel)]="complemento" name="complemento" required />
+  </div>
+
+  <div class="botao-container">
+    <button class="salva" pButton type="submit" label="Terminar cadastro"></button>
+  </div>
+  
+</form>
+</main>
+
+<router-outlet></router-outlet>
+

@@ -1,0 +1,50 @@
+<main class="main">
+<form class="formulario" style="max-width:500px; margin:2rem auto;" (ngSubmit)="onSubmit()">
+  <h1>Cadastro usuário Vertrau</h1>
+
+  <div class="nome">
+    <label for="nome">Nome</label>
+    <input id="nome" type="text" pInputText placeholder="Nome" [(ngModel)]="nome" name="nome" required />
+  </div>
+
+  <div class="sobrenome">
+    <label for="sobrenome">Sobrenome</label>
+    <input id="sobrenome" type="text" pInputText placeholder="Sobrenome" [(ngModel)]="sobrenome" name="sobrenome" required />
+  </div>
+
+  <div class="email">
+    <label for="email">Email</label>
+    <input id="email" type="email" pInputText placeholder="Email" [(ngModel)]="email" name="email" required />
+  </div>
+
+  <div class="genero" >
+    <label for="genero">Gênero</label>
+    <select name="Gênero" id="genero" [(ngModel)] = "genero">
+    <option [value]="0">Masculino</option>
+    <option [value]="1">Feminino</option>
+    <option [value]="2">Outros</option>
+    </select>
+  </div>
+
+  <div class="datanascimento">
+    <label for="datanascimento">Data de nascimento</label>
+    <input id="datanascimento" type="date" pInputText placeholder="Data de nascimento" [(ngModel)]="datanascimento" name="datanascimento" required />
+  </div>
+
+  <div class="botao-container">
+    <button class="salva" pButton type="submit" label="Salvar usuario e ir para o cadastro de endereço"></button>
+  </div>
+
+  <div class="botao-container-exclui">
+    <button class="exclui" pButton type="button" (click)="excluirUsuario()" label="Excluir usuário"></button>
+  </div>
+
+  <input id="idusuario" type="number" pInputText placeholder="ID do usuário para EXCLUSÃO" name="idusuario" [(ngModel)]="idusuario" />
+
+
+</form>
+</main>
+
+<router-outlet></router-outlet>
+
+
